@@ -225,5 +225,6 @@
     "snapshot": {
       "percy-css": ".percy-hide { opacity: 0!important; } "
     }
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
