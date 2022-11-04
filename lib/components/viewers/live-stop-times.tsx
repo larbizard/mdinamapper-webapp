@@ -1,8 +1,5 @@
-import 'moment-timezone'
 import { FormattedMessage, FormattedTime } from 'react-intl'
-// TODO: typescript core-utils, add common types (pattern, stop, configs)
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+import { Redo } from '@styled-icons/fa-solid/Redo'
 import coreUtils from '@opentripplanner/core-utils'
 import React, { Component } from 'react'
 
@@ -11,7 +8,7 @@ import {
   getStopTimesByPattern,
   routeIsValid
 } from '../../util/viewer'
-import Icon from '../util/icon'
+import { IconWithText } from '../util/styledIcon'
 import SpanWithSpace from '../util/span-with-space'
 
 import AmenitiesPanel from './amenities-panel'
@@ -174,10 +171,11 @@ class LiveStopTimes extends Component<Props, State> {
           <label style={{ fontSize: 'small', fontWeight: 300 }}>
             <SpanWithSpace margin={0.25}>
               <input
-                checked={this.props.autoRefreshStopTimes}
+                defaultChecked={this.props.autoRefreshStopTimes}
                 name="autoUpdate"
                 onChange={this._onToggleAutoRefresh}
                 type="checkbox"
+                value={this.props.autoRefreshStopTimes?.toString()}
               />
             </SpanWithSpace>
             <FormattedMessage id="components.LiveStopTimes.autoRefresh" />
@@ -187,12 +185,13 @@ class LiveStopTimes extends Component<Props, State> {
             onClick={this._refreshStopTimes}
             style={{ fontSize: 'small' }}
           >
-            <Icon className={spin ? 'fa-spin' : ''} type="refresh" withSpace />
-            <FormattedTime
-              timeStyle="short"
-              timeZone={userTimezone}
-              value={stopData.stopTimesLastUpdated}
-            />
+            <IconWithText Icon={Redo} spin={spin}>
+              <FormattedTime
+                timeStyle="short"
+                timeZone={userTimezone}
+                value={stopData.stopTimesLastUpdated}
+              />
+            </IconWithText>
           </button>
           {showNearbyStops && (
             <>

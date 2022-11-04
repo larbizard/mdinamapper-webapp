@@ -2,14 +2,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // import {DropdownSelector} from '@opentripplanner/trip-form'
 import { connect } from 'react-redux'
+import { injectIntl, IntlShape } from 'react-intl'
 import React, { Component } from 'react'
 
+import { combinationFilter } from '../../util/combination-filter'
 import { ComponentContext } from '../../util/contexts'
+import { getSupportedModes } from '../../util/i18n'
 import { setQueryParam } from '../../actions/form'
 
-import { combinationFilter } from './batch-settings'
 import { defaultModeOptions, Mode } from './mode-buttons'
 import { StyledBatchPreferences } from './batch-styled'
+
+interface Props {
+  config: any
+  intl: IntlShape
+  modeOptions: Mode[]
+  query: any
+  setQueryParam: (newQueryParam: any) => void
+}
 
 // TODO: Central type source
 export type Combination = {
@@ -28,12 +38,7 @@ export const replaceTransitMode =
     return { ...combination, mode }
   }
 
-class BatchPreferences extends Component<{
-  config: any
-  modeOptions: Mode[]
-  query: any
-  setQueryParam: (newQueryParam: any) => void
-}> {
+class BatchPreferences extends Component<Props> {
   static contextType = ComponentContext
 
   /**
@@ -45,7 +50,9 @@ class BatchPreferences extends Component<{
    */
   onQueryParamChange = (newQueryParams: any) => {
     const { config, modeOptions, query, setQueryParam } = this.props
-    const enabledModes = query.enabledModes || modeOptions
+    const enabledModes =
+      query.enabledModes ||
+      modeOptions.filter((m) => !m.defaultUnselected).map((m) => m.mode)
     const combinations = config.modes.combinations
       .filter(combinationFilter(enabledModes))
       .map(replaceTransitMode(newQueryParams.mode))
@@ -53,7 +60,7 @@ class BatchPreferences extends Component<{
   }
 
   render() {
-    const { config, query } = this.props
+    const { config, intl, query } = this.props
     const { ModeIcon } = this.context
 
     return (
@@ -64,7 +71,7 @@ class BatchPreferences extends Component<{
             onQueryParamChange={this.onQueryParamChange}
             queryParams={query}
             supportedCompanies={config.companies}
-            supportedModes={config.modes}
+            supportedModes={getSupportedModes(config, intl)}
           />
           {/*
             FIXME: use these instead? They're currently cut off by the short
@@ -143,4 +150,7 @@ const mapDispatchToProps = {
   setQueryParam
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BatchPreferences)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(injectIntl(BatchPreferences))
