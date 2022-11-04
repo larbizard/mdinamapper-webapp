@@ -1,4 +1,4 @@
-_id: fr
+_id: ar
 _name: Exemple de traduction pour OTP-react-redux en français !
 
 # Noteworthy items for translating into French:
@@ -129,7 +129,7 @@ components:
     expandMap: Étendre la carte
     showResults: Voir les résultats
   BatchRoutingPanel:
-    shortTitle: Planifier un trajet
+    shortTitle: خطة رحلة
   BatchSearchScreen:
     header: Planifiez votre trajet
   BatchSettings:
@@ -684,8 +684,9 @@ otpUi:
     transitFareEntry: "{name} : <strong>{value}</strong>"
     tripIncludesFlex: Ce trajet comprend un service à la demande (Flex).
   LocationField:
-    recentlySearched: Récemment recherché
-    myPlaces: Mes endroits favoris
+    recentlySearched: بحثت مؤخرا
+    myPlaces: أماكني المفضلة
+
 common:
   coordinates: "{lat}; {lon}"
   dateExpressions:

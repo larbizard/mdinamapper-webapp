@@ -1,6 +1,6 @@
 .otp .navbar {
   border-radius: 0;
-  background-color: #444;
+  background-color: rgb(250 204 21);
   margin: 0px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .otp .navbar-title {
-  color: #fff;
+  color: #000;
   font-size: 24px;
   padding-top: 7px;
 }
