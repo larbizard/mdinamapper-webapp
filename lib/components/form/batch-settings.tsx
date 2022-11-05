@@ -1,17 +1,19 @@
 /* eslint-disable react/prop-types */
+import { Cog } from '@styled-icons/fa-solid/Cog'
 import { connect } from 'react-redux'
 import { injectIntl, IntlShape } from 'react-intl'
-// FIXME: type OTP-UI
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
+import { Search } from '@styled-icons/fa-solid/Search'
+import { SyncAlt } from '@styled-icons/fa-solid/SyncAlt'
 import coreUtils from '@opentripplanner/core-utils'
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
 import * as apiActions from '../../actions/api'
 import * as formActions from '../../actions/form'
-import { hasValidLocation } from '../../util/state'
-import Icon from '../util/icon'
+import { combinationFilter } from '../../util/combination-filter'
+import { getActiveSearch, hasValidLocation } from '../../util/state'
+import { getDefaultModes } from '../../util/itinerary'
+import { StyledIconWrapper } from '../util/styledIcon'
 
 import {
   BatchPreferencesContainer,
@@ -30,27 +32,6 @@ import ModeButtons, {
 } from './mode-buttons'
 import type { Combination } from './batch-preferences'
 import type { Mode } from './mode-buttons'
-
-/**
- * A function that generates a filter to be used to filter a list of combinations.
- * @param enabledModes A list of the modes enabled in the UI
- * @returns Filter function to filter combinations
- */
-export const combinationFilter =
-  (enabledModes: string[]) =>
-  (c: Combination): boolean => {
-    if (c.requiredModes) {
-      return c.requiredModes.every((m) => enabledModes.includes(m))
-    } else {
-      // This is for backwards compatibility
-      // In case a combination does not include requiredModes.
-      console.warn(
-        `Combination ${c.mode} does not have any specified required modes.`
-      )
-      const modesInCombination = c.mode.split(',')
-      return modesInCombination.every((m) => enabledModes.includes(m))
-    }
-  }
 
 const ModeButtonsFullWidthContainer = styled.div`
   display: flex;
@@ -84,12 +65,9 @@ const ModeButtonsCompressed = styled(ModeButtons)`
     border-radius: 0px 5px 5px 0px;
   }
 `
-
-/**
- * Main panel for the batch/trip comparison form.
- */
 // TYPESCRIPT TODO: better types
-class BatchSettings extends Component<{
+type Props = {
+  activeSearch: any
   config: any
   currentQuery: any
   intl: IntlShape
@@ -97,10 +75,23 @@ class BatchSettings extends Component<{
   possibleCombinations: Combination[]
   routingQuery: any
   setQueryParam: (queryParam: any) => void
-}> {
-  state = {
-    expanded: null,
-    selectedModes: this.props.modeOptions.map((m) => m.mode)
+}
+
+type State = {
+  expanded?: string | null
+  selectedModes: string[]
+}
+
+/**
+ * Main panel for the batch/trip comparison form.
+ */
+class BatchSettings extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props)
+    this.state = {
+      expanded: null,
+      selectedModes: getDefaultModes(props.modeOptions) || []
+    }
   }
 
   _onClickMode = (mode: string) => {
@@ -167,7 +158,7 @@ class BatchSettings extends Component<{
   _toggleSettings = () => this.setState(this._updateExpanded('SETTINGS'))
 
   render() {
-    const { config, currentQuery, intl, modeOptions } = this.props
+    const { activeSearch, config, currentQuery, intl, modeOptions } = this.props
     const { expanded, selectedModes } = this.state
     return (
       <>
@@ -187,7 +178,9 @@ class BatchSettings extends Component<{
             {coreUtils.query.isNotDefaultQuery(currentQuery, config) && (
               <Dot className="dot" />
             )}
-            <Icon className="fa-2x" type="cog" />
+            <StyledIconWrapper size="2x">
+              <Cog />
+            </StyledIconWrapper>
           </SettingsPreview>
           <StyledDateTimePreview
             // as='button'
@@ -209,7 +202,15 @@ class BatchSettings extends Component<{
               id: 'components.BatchSettings.planTripTooltip'
             })}
           >
-            <Icon className="fa-2x" type="search" />
+            <StyledIconWrapper style={{ fontSize: '1.6em' }}>
+              {hasValidLocation(currentQuery, 'from') &&
+              hasValidLocation(currentQuery, 'to') &&
+              !!activeSearch ? (
+                <SyncAlt />
+              ) : (
+                <Search />
+              )}
+            </StyledIconWrapper>
           </PlanTripButton>
         </MainSettingsRow>
         {expanded === 'DATE_TIME' && (
@@ -230,6 +231,7 @@ class BatchSettings extends Component<{
 // connect to the redux store
 // TODO: Typescript
 const mapStateToProps = (state: any) => ({
+  activeSearch: getActiveSearch(state),
   config: state.otp.config,
   currentQuery: state.otp.currentQuery,
   modeOptions: state.otp.config.modes.modeOptions || defaultModeOptions,
