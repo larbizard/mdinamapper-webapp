@@ -1,5 +1,5 @@
-_id: ar
-_name: Exemple de traduction pour OTP-react-redux en français !
+_id: ar-MA
+_name: العربية
 
 # Noteworthy items for translating into French:
 # - trip, itinerary, journey => trajet
@@ -10,7 +10,6 @@ _name: Exemple de traduction pour OTP-react-redux en français !
 # - Instruction text is generally less cheerful in French than English (e.g. fewer uses of exclamation marks)
 #   and tends to rely on infinitive tense.
 #
-
 # Messages that are generated from actions
 actions:
   callTaker:
@@ -44,7 +43,7 @@ actions:
     geolocationNotSupportedError: La géolocalisation n'est pas prise en charge par votre navigateur.
     unknownPositionError: Erreur non-gérée lors de la détection de votre emplacement.
   map:
-    currentLocation: (Emplacement actuel)
+    currentLocation: (الموقع الحالي)
   user:
     accountDeleted: Votre compte utilisateur ({email}) a été supprimé.
     authTokenError: Erreur lors de l'obtention d'un jeton d'authentification.
@@ -116,32 +115,32 @@ components:
         other {# emplacements disponibles}
       }
   AppMenu:
-    callHistory: Historique des appels
-    closeMenu: Fermer le menu
-    fieldTrip: Groupes scolaires
-    mailables: Prêt-à-poster
-    menuItemIconAlt: "Icône pour le menu {label}"
-    openMenu: "Ouvrir le menu"
-    routeViewer: Index des lignes
+    callHistory: سجل المكالمات
+    closeMenu: إغلاق القائمة
+    fieldTrip: مجموعات المدرسة
+    mailables: جاهز للنشر
+    menuItemIconAlt: "{label} رمز القائمة"
+    openMenu: "فتح القائمة"
+    routeViewer: فهرس الصف
   BackToTripPlanner:
-    backToTripPlanner: Retour au planificateur de trajets
+    backToTripPlanner: العودة إلى مخطط الرحلة
   BatchResultsScreen:
-    expandMap: Étendre la carte
-    showResults: Voir les résultats
+    expandMap: قم بتوسيع الخريطة
+    showResults: انظر النتائج
   BatchRoutingPanel:
-    shortTitle: خطة رحلة
+    shortTitle: خطط رحلتك
   BatchSearchScreen:
-    header: Planifiez votre trajet
+    header: خطط رحلتك
   BatchSettings:
-    destination: destination
-    origin: point de départ
-    planTripTooltip: Planifier le trajet
-    validationMessage: "Veuillez définir les champs suivants afin de planifier votre trajet : {issues}"
+    destination: المكان المقصود
+    origin: نقطة البداية
+    planTripTooltip: خطط الرحلة
+    validationMessage: "{issues} : يرجى تحديد الحقول التالية من أجل التخطيط لرحلتك"
   BeforeSignInScreen:
-    mainTitle: Connexion en cours
+    mainTitle: جاري الاتصال
     message: >
-      Pour accéder à cette page, vous devez vous connecter.
-      Veuillez patienter pendant que nous vous redirigeons vers la page de connexion...
+      للوصول إلى هذه الصفحة ، يجب عليك تسجيل الدخول.
+      ...يرجى الانتظار حتى نعيد توجيهك إلى صفحة تسجيل الدخول
   CallTakerPanel:
     advancedOptions: Options avancées
     groupSize: "Taille du groupe :"
@@ -149,51 +148,51 @@ components:
   DateTimeOptions:
     arriveBy: Arriver à
     departAt: Partir à
-    now: Tout de suite
+    now: فورا
   DateTimePreview:
-    arriveAt: "Arrivée {arriveTime, time, short}"
-    departAt: "Départ {departTime, time, short}"
-    editDepartOrArrival: Modifier l'heure de départ ou d'arrivée
-    dayLastWeek: "{formattedDayOfWeek} dernier"
-    leaveNow: Tout de suite
-    range: "{startTime, time, short} à {endTime, time, short}"
+    arriveAt: "وصول {arriveTime, time, short}"
+    departAt: "الاقلاع {departTime, time, short}"
+    editDepartOrArrival: تغيير موعد المغادرة أو الوصول
+    dayLastWeek: "الاخير {formattedDayOfWeek}"
+    leaveNow: فورا
+    range: "{startTime, time, short} الى {endTime, time, short}"
   DateTimeScreen:
-    header: Jour et heure du trajet
+    header: يوم ووقت الرحلة
   DefaultItinerary:
-    clickDetails: Cliquez pour afficher les détails
+    clickDetails: اضغط لعرض التفاصيل
     multiModeSummary: "{accessMode} + {transitMode}"
   DeleteUser:
-    deleteMyAccount: Supprimer mon compte
+    deleteMyAccount: احذف حسابي
   EnhancedStopMarker:
-    planATrip: "Planifier un trajet :"
-    stopID: "Arrêt nº"
-    stopViewer: Info arrêt
+    planATrip: "خطط رحلتك"
+    stopID: "nº الموقف"
+    stopViewer: معلومات الموقف
   ErrorMessage:
-    header: Impossible de planifier le trajet
-    warning: Attention
+    header: غير قادر على التخطيط للرحلة
+    warning: حذاري
   ExistingAccountDisplay:
-    a11y: Accessibilité
-    mainTitle: Mes préférences
-    notifications: Notifications
-    places: Lieux favoris
-    terms: Conditions d'utilisation
+    a11y: إمكانية الوصول
+    mainTitle: تفضيلاتي
+    notifications: إعلام
+    places: الأماكن المفضلة
+    terms: شروط الاستعمال
   FavoritePlaceList:
-    addAnotherPlace: Ajouter un autre lieu
-    description: "Ajoutez les lieux que vous fréquentez souvent pour faciliter vos recherches de trajets :"
+    addAnotherPlace: "أضف مكانًا آخر"
+    description: ": أضف الأماكن التي تتردد عليها كثيرًا لتسهيل بحثك عن الرحلات"
     # editThisPlace is a tooltip text.
-    editThisPlace: Modifier ce lieu
-    setAddressForPlaceType: Entrez l'adresse de votre {placeType}
+    editThisPlace: قم بتحرير هذا المكان
+    setAddressForPlaceType: "{placeType} أدخل عنوان"
   FavoritePlaceScreen:
-    addNewPlace: Ajouter un nouveau lieu
-    editPlace: Modifier le {placeName}
-    editPlaceGeneric: Modifier le lieu
-    invalidAddress: Veuillez entrer l'adresse du lieu.
-    invalidName: Veuillez saisir le nom du lieu.
-    nameAlreadyUsed: Ce nom est déjà utilisé avec un autre lieu. Veuillez saisir un nom différent.
-    placeNotFound: Lieu introuvable
-    placeNotFoundDescription: Le lieu recherché est introuvable.
+    addNewPlace: أضف مكانًا جديدًا
+    editPlace: "{placeName} تعديل"
+    editPlaceGeneric: تغيير الموقع
+    invalidAddress: الرجاء إدخال عنوان الموقع
+    invalidName: الرجاء إدخال اسم المكان
+    nameAlreadyUsed: هذا الاسم مستخدم بالفعل مع موقع آخر. الرجاء إدخال اسم مختلف
+    placeNotFound:  الموقع غير موجود
+    placeNotFoundDescription: لا يمكن العثور على الموقع الذي تبحث عنه
   FormNavigationButtons:
-    ariaLabel: Navigation du formulaire
+    ariaLabel: التنقل في النموذج
   ItinerarySummary:
     fareCost: >
       {useMaxFare, select,
@@ -201,250 +200,250 @@ components:
         other {{minTotalFare}}
       }
   LiveStopTimes:
-    autoRefresh: Rafraîchir les horaires automatiquement ?
+    autoRefresh: هل تريد تحديث الجداول تلقائيًا؟
   LocationSearch:
-    enterLocation: Entrez le lieu
-    setDestination: Choisissez la destination
-    setOrigin: Choisissez le point de départ
+    enterLocation:  إدخال الدولة
+    setDestination: اختر وجهة
+    setOrigin: اختر نقطة البداية
   MainMobile:
-    invalidScreen: Écran non valable.
+    invalidScreen: شاشة غير صالحة
   MobileOptions:
-    header: Options de recherche
+    header: خيارات البحث
   ModeDropdown:
-    exclusiveMode: "{mode} uniquement"
+    exclusiveMode: "فقط {mode}"
   NarrativeItinerariesHeader:
     numIssues: >
       {issueNum, number} {issueNum, plural,
-        one {problème}
-        other {problèmes}
+        one {مشكلة}
+        other {مشكلة}
       }
     # Note to translator: resultText is width-constrained
     # (about half pane width)
     resultText: >
       {pending, select,
-        true {Recherche en cours...}
+        true {...يجري البحث حاليا}
         other {{itineraryNum, number} {itineraryNum, plural,
-            one {trajet trouvé}
-            other {trajets trouvés}
+            one {وجدت المسار}
+            other {وجدت طرق}
         }}
       }
-    selectArrivalTime: Heure d'arrivée
-    selectBest: Meilleure option
-    selectCost: Prix
-    selectDepartureTime: Heure de départ
-    selectDuration: Durée
-    selectWalkTime: Temps de marche
+    selectArrivalTime: ساعة الوصول
+    selectBest: الخيار الأفضل
+    selectCost: سعر
+    selectDepartureTime: ساعة الإنطلاق
+    selectDuration: مدة
+    selectWalkTime: وقت المشي
     titleText: >
       {pending, select,
-        true {Recherche en cours...}
+        true {...يجري البحث حاليا}}
         other {
           {itineraryNum, number} {itineraryNum, plural,
-            one {trajet}
-            other {trajets}} {issueNum, plural,
-            =0 {trouvé}
-            one {(et # problème) trouvé}
-            other {(et # problèmes) trouvés}
+            one {طريق}
+            other {الطرق}} {issueNum, plural,
+            =0 {وجدت}
+            one {(و # مشكلة) وجدت}
+            other {(و # مشاكل) وجدت}
           }
         }
       }
-    viewAll: Toutes les options
+    viewAll: كل الخيارات
   NavLoginButton:
-    help: Aide
-    myAccount: Mon compte
-    signIn: Se connecter
-    signOut: Déconnexion
+    help: مساعدة
+    myAccount: حسابي
+    signIn: يتصل
+    signOut: تسجيل خروج
   NewAccountWizard:
-    finish: Votre nouveau compte est prêt !
-    notifications: Recevez vos notifications
-    places: Ajoutez vos lieux
-    terms: Créez votre nouveau compte
-    verify: Vérifiez votre adresse e-mail
+    finish: حسابك الجديد جاهز!
+    notifications: تلقي الإخطارات الخاصة بك
+    places: أضف أماكنك
+    terms: قم بإنشاء حسابك الجديد
+    verify: تحقق من عنوان بريدك الإلكتروني
   NotFound:
-    description: Le contenu que vous avez demandé n'est pas disponible.
-    header: Contenu introuvable
+    description: المحتوى الذي طلبته غير متوفر.
+    header: المحتوى غير موجود
   NotificationPrefsPane:
-    description: Vous pouvez recevoir des notifications sur les trajets que vous effectuez fréquemment.
-    notificationChannelPrompt: Comment voulez-vous recevoir vos notifications ?
-    notificationEmailDetail: "Les courriers de notification seront envoyés à :"
-    noneSelect: Ne pas me notifier
+    description: يمكنك تلقي إشعارات حول الرحلات التي تقوم بها بشكل متكرر.
+    notificationChannelPrompt: كيف تريد أن تتلقى إشعاراتك؟
+    notificationEmailDetail: ": سيتم إرسال رسائل التنبيه إلى"
+    noneSelect: لم يكن ليخطر عني
   PatternRow:
     collapseOrExpandDepartures: >
       {expanded, select,
-        true {Masquer}
-        other {Étendre}
-      } tous les départs pour la ligne {routeName}
-    departure: Départ
-    routeName: "<strong>{routeName}</strong> Direction {headsign}"
-    routeShort: "Direction {headsign}"
-    status: État
+        true {يخفي}
+        other {تمديد}
+      } كل المغادرين للخط {routeName}
+    departure: الاقلاع
+    routeName: "<strong>{routeName}</strong> اتجاه {headsign}"
+    routeShort: "{headsign} اتجاه"
+    status: حالة
   PhoneNumberEditor:
-    changeNumber: Changer de numéro
-    invalidCode: Le code de vérification doit comporter 6 chiffres.
-    invalidPhone: Veuillez entrer un numéro de téléphone valable.
-    pending: Non vérifié
+    changeNumber: تغيير رقم
+    invalidCode: يجب أن يتكون رمز التحقق من 6 أرقام
+    invalidPhone: يرجى إدخال رقم هاتف صالح
+    pending: لم يتم التحقق منها
     # Note to translator: placeholder is width-constrained.
-    placeholder: "Entrez votre numéro"
-    prompt: "Entrez votre numéro de téléphone pour les SMS de notification :"
-    requestNewCode: Envoyer un nouveau code
-    sendVerificationText: Envoyer le SMS de vérification
-    smsDetail: "Les SMS de notification seront envoyés au :"
-    verified: Verifié
-    verificationCode: "Code de vérification :"
+    placeholder: "أدخل رقمك"
+    prompt: "أدخل رقم هاتفك لإشعار الرسائل القصيرة"
+    requestNewCode: أرسل كود جديد
+    sendVerificationText: إرسال رسالة تأكيد SMS
+    smsDetail: "سيتم إرسال رسائل التنبيه القصيرة إلى"
+    verified: التحقق
+    verificationCode: "رمز التحقق"
     verificationInstructions: >
-      Un SMS vous a été envoyé avec un code de vérification.
-      Veuillez taper ce code ci-dessous (le code expire après 10 minutes).
-    verify: Verifier
+      تم إرسال رسالة نصية قصيرة إليك تحتوي على رمز التحقق.
+      الرجاء كتابة هذا الرمز أدناه (تنتهي صلاحية الرمز بعد 10 دقائق).
+    verify: يفحص
   Place:
     # deleteThisPlace is an aria/tooltip text.
-    deleteThisPlace: Supprimer ce lieu
+    deleteThisPlace: احذف هذا المكان
     enterAlert: >
-      Entrez votre point de départ/destination dans le formulaire (ou cliquez sur la carte),
-      puis cliquez sur le marqueur qui apparaît afin de définir votre {placeType}.
-    viewStop: Voir cet arrêt
+      أدخل نقطة البداية / الوجهة في النموذج (أو انقر على الخريطة) ،
+      ثم انقر فوق العلامة التي تظهر لتعريف {placeType} الخاص بك.
+    viewStop: انظر الى هذه المحطة
   PlaceEditor:
-    genericLocationPlaceholder: Adresse du lieu
-    locationPlaceholder: Adresse de votre {placeName}
-    namePlaceholder: Entrez le nom du lieu
+    genericLocationPlaceholder: عنوان الموقع
+    locationPlaceholder: "{placeName} عنوان الخاص ب"
+    namePlaceholder: أدخل اسم المكان
   PlanFirstLastButtons:
     # Note to translator: these values are width-constrained.
-    first: Premier
-    last: Dernier
-    next: Suivant
-    previous: Précédent
+    first: أولاً
+    last: آخر
+    next: التالي
+    previous: سابق
   PlanTripButton:
-    planTrip: Planifier le trajet # or simply "Rechercher"
+    planTrip: خطط الرحلة # or simply "Rechercher"
   PrintLayout:
-    itinerary: Votre trajet
-    toggleMap: Afficher/masquer la carte
+    itinerary: رحلتك
+    toggleMap: إظهار / إخفاء الخريطة
   RealtimeAnnotation:
-    delaysShownInResults: "Vos trajets recherchés ont été mis à jour avec les conditions en temps réel.
-      En temps normal, ce trajet prendrait {normalDuration} en empruntant les lignes: {routes}."
-    serviceUpdate: Information sur le service
+    delaysShownInResults: "تم تحديث رحلاتك التي تم البحث عنها بظروف الوقت الفعلي.
+       {routes} :لى طول الخطوط {normalDuration} عادة ، ستستغرق هذه الرحلة"
+    serviceUpdate: معلومات الخدمة
   RealtimeStatusLabel:
     # Note to translator: In itinerary body, early or late is single-line
     # and stacked above/below the delay in minutes depending on word order,
     # e.g. "5 min\nlate".
     # In the StopViewer, delay and status are shown in a single line.
     # Width is constrained for all messages.
-    early: "avance de {minutes}"
-    late: "retard {minutes}"
-    onTime: à l'heure
-    scheduled: horaire
+    early: "{minutes} تقدم"
+    late: "{minutes} تأخير"
+    onTime: في الوقت
+    scheduled: الجدول الزمني
   RelatedPanel:
-    hideExtraStops: Masquer les arrêts à proximité
-    showExtraStops: "Afficher {count} arrêts à proximité"
+    hideExtraStops: إخفاء المحطات القريبة
+    showExtraStops: "المحطات القريبة {count} عرض "
   RelatedStopsPanel:
-    relatedStops: Arrêts à proximité
-    viewDetails: Détails
-    noArrivalFound: Aucun passage prévu
+    relatedStops: المحطات القريبة
+    viewDetails: تفاصيل
+    noArrivalFound: لا يوجد ممر مخطط
   ResultsError:
-    backToSearch: Retour à la recherche
+    backToSearch: العودة للبحث
   ResultsHeader:
-    noTripFound: Aucun trajet trouvé
+    noTripFound: لم يتم العثور على رحلات
     tripsFound: "{count} {count, plural, one {trajet trouvé} other {trajets trouvés}}"
-    waiting: Patientez...
+    waiting: ...انتظر
   ResultsScreen:
-    header: Option {index}
+    header: خيار {index}
   RouteDetails:
-    operatedBy: "Exploité par {agencyName}"
-    moreDetails: "Plus d'infos"
-    stopsTo: "Direction"
-    selectADirection: "Choisissez une direction..."
+    operatedBy: "يستخدم {agencyName}"
+    moreDetails: "أكثر معلومات"
+    stopsTo: "اتجاه"
+    selectADirection: "...اختر اتجاهًا"
   RouteRow:
-    operatorLogoAltText: "Logo de {operatorName}"
+    operatorLogoAltText: "شعار {operatorName}"
   # Used in both desktop and mobile
   RouteViewer:
-    agencyFilter: Filtrer les transporteurs
-    allAgencies: Tous transporteurs
-    allModes: Tous modes # Note to translator: This text is width-constrained.
+    agencyFilter: رشح الناقلين
+    allAgencies: جميع الناقلين
+    allModes: كل الأوضاع # Note to translator: This text is width-constrained.
     delaysShownInResults: >
-      Vos trajets recherchés ont été mis à jour avec les conditions en temps réel.
-      En temps normal, ce trajet prendrait <strong>{normalDuration}</strong> en empruntant les lignes: {routes}.
+      .تم تحديث رحلاتك التي تم البحث عنها بظروف الوقت الفعلي
+      {routes} : على طول الخطوط <strong>{normalDuration}</strong> عادة ، ستستغرق هذه الرحلة
     details: " " # If the string is left blank, React-Intl renders the id
-    findARoute: Chercher une ligne
-    header: Index des lignes
-    modeFilter: Filtre pour les modes
-    noFilteredRoutesFound: Aucune ligne ne correspond à vos critères
-    noRouteUrl: Aucun lien fourni pour cette ligne.
-    serviceUpdate: Information sur le service
-    shortTitle: Index des lignes
-    title: Index des lignes
+    findARoute: ابحث عن خط
+    header: الاطلاع عن جميع الخطوط
+    modeFilter: تصفية للأوضاع
+    noFilteredRoutesFound: لا توجد أسطر تطابق المعايير الخاصة بك
+    noRouteUrl: .لم يتم توفير ارتباط لهذا الخط
+    serviceUpdate: معلومات الخدمة
+    shortTitle: الاطلاع عن جميع الخطوط
+    title: الاطلاع عن جميع الخطوط
   SavedTripEditor:
-    editSavedTrip: Modifier un trajet enregistré
-    saveNewTrip: Enregistrer un nouveau trajet
-    tripInformation: Informations sur le trajet
-    tripNotFound: Trajet introuvable
-    tripNotFoundDescription: Le trajet recherché est introuvable.
-    tripNotifications: Notifications du trajet
+    editSavedTrip: تحرير رحلة محفوظة
+    saveNewTrip: سجل رحلة جديدة
+    tripInformation: معلومات الرحلة
+    tripNotFound: المسار مفقود
+    tripNotFoundDescription: .الطريق الذي تبحث عنه لا يمكن العثور عليه
+    tripNotifications: إخطارات الرحلة
   SavedTripList:
-    myTrips: Mes trajets
-    noSavedTrips: Vous n'avez aucun trajet enregistré
-    noSavedTripsInstructions: Effectuez une recherche depuis la carte avant de pouvoir enregistrer un nouveau trajet.
-    pause: Arrêter
-    resume: Reprendre
+    myTrips: رحلاتي
+    noSavedTrips: ليس لديك رحلات محفوظة
+    noSavedTripsInstructions: .ابحث من الخريطة قبل أن تتمكن من حفظ رحلة جديدة
+    pause:  قف
+    resume: يستعيد
   SavedTripScreen:
     tooManyTrips: >
-      Vous avez déjà atteint le nombre maximum de 5 trajets enregistrés.
-      Veuillez supprimer les trajets enregistrés qui sont inutilisés, puis réessayez.
-    tripNameAlreadyUsed: Ce nom est déjà utilisé avec un autre trajet. Veuillez choisir un nom différent.
-    tripNameRequired: Veuillez entrer un nom pour ce trajet.
+      لقد وصلت بالفعل إلى الحد الأقصى لعدد الرحلات المحفوظة وهو 5 رحلات.
+      .يرجى حذف الرحلات المحفوظة غير المستخدمة والمحاولة مرة أخرى
+    tripNameAlreadyUsed: .هذا الاسم مستخدم بالفعل مع مسار آخر. الرجاء اختيار اسم مختلف
+    tripNameRequired: .الرجاء إدخال اسم لهذه الرحلة
   SaveTripButton:
-    cantSaveText: Impossible d'enregistrer
-    cantSaveTooltip: Seuls les trajets en transports publics sans location de véhicules et sans course en voiture peuvent être suivis.
-    saveTripText: Enregistrer
-    signInText: Connectez-vous pour enregistrer
-    signInTooltip: Veuillez vous connecter pour enregistrer ce trajet.
+    cantSaveText: لا يمكن حفظه
+    cantSaveTooltip: .يمكن فقط تتبع الرحلات بواسطة وسائل النقل العام بدون استئجار سيارات وبدون سباق سيارات
+    saveTripText: يسجل
+    signInText: تسجيل الدخول للحفظ
+    signInTooltip: .الرجاء تسجيل الدخول لحفظ هذه الرحلة
   SearchScreen:
-    header: Planifiez votre trajet
+    header: خطط لرحلتك
   SettingsPreview:
-    defaultPreviewText: "Choix du mode\n& préférences"
+    defaultPreviewText: "اختيار الوضع \n & التفضيلات"
   SimpleRealtimeAnnotation:
-    usingRealtimeInfo: Ce trajet utilise les informations en temps réel sur le trafic et les retards
+    usingRealtimeInfo: يستخدم هذا المسار معلومات عن حركة المرور والتأخير في الوقت الفعلي
   StackedPaneDisplay:
-    savePreferences: Enregistrer mes préférences
+    savePreferences: احفظ تفضيلاتي
   StopScheduleTable:
-    block: Bloc
-    departure: Départ
-    destination: Direction
-    route: Ligne
+    block: حاجز
+    departure: الاقلاع
+    destination: اتجاه
+    route: خط
   StopTimeCell:
     imminentArrival: >
       {isDue, select,
-        true {Imminent}
+        true {وشيك}
         other {{formattedDuration}}
       }
   # Used in both desktop and mobile
   StopViewer:
-    displayStopId: "<strong>Arrêt n°</strong> {stopId}"
-    flexStop: Cet arrêt fait partie d'une zone 'Flex' et est desservi à la demande. Une réservation préalable peut être exigée pour obtenir la desserte.
-    header: Info arrêt
-    loadingText: Chargement de l'arrêt...
-    noStopsFound: Aucun horaire pour la date choisie.
-    planTrip: "Faire un trajet :"
-    timezoneWarning: "Les horaires sont affichés dans le fuseau <strong>{timezoneCode}</strong>."
+    displayStopId: "{stopId} <strong>n° الموفق</strong>"
+    flexStop: .هذه المحطة هي جزء من منطقة "فليكس" ويتم تقديمها عند الطلب. قد يلزم الحجز المسبق للحصول على الخدمة
+    header: معلومات عن الموفق
+    loadingText: ...توقف عن التحميل
+    noStopsFound: .لا يوجد جدول زمني للتاريخ المختار
+    planTrip: ": قم برحلة"
+    timezoneWarning: "<strong>{timezoneCode}</strong> يتم عرض الأوقات في المنطقة الزمنية"
     viewTypeBtnText: >
       {scheduleView, select,
-        true {Prochains passages}
-        other {Horaires}
+        true {المقاطع التالية}
+        other {برنامج}
       }
-    zoomToStop: Zoomer sur l'arrêt
+    zoomToStop: تكبير الموقف
 
   SubNav:
-    myAccount: Mon compte
-    settings: Préférences
-    trips: Trajets
+    myAccount: حسابي
+    settings: التفضيلات
+    trips: المسارات
   SwitchButton:
-    defaultContent: Permuter
-    switchLocations: Permuter les lieux
+    defaultContent: تبديل
+    switchLocations: تبديل المواقع 
   TabbedFormPanel:
-    hideSettings: "Masquer les paramètres"
+    hideSettings: "إخفاء الإعدادات"
   TabbedItineraries:
-    optionNumber: "Option {optionNum, number}"
+    optionNumber: "{optionNum, number} خيار"
     # Note to translator: This text is width-constrained.
-    mustCallAhead: Résa. obligatoire
+    mustCallAhead: الحجز الإجباري
     fareCost: >
       {hasMaxFare, select,
-        true {À partir de {minTotalFare}}
+        true {ابتداء من {minTotalFare}}
         other {{minTotalFare}}
       }
   TermsOfUsePane:
@@ -575,92 +574,94 @@ components:
       *** DÉTAILS TECHNIQUES ***
   # Used in both desktop and mobile
   TripViewer:
-    accessible: Accessible
-    bicyclesAllowed: Autorisés
-    header: Info trajet
-    routeHeader: "Ligne : <strong>{routeShortName}</strong> {routeLongName}"
-    viewStop: Info
+    accessible: يمكن الوصول
+    bicyclesAllowed: مخول
+    header: معلومات الرحلة
+    routeHeader: "<strong>{routeShortName}</strong> {routeLongName} : خط"
+    viewStop: معلومة
   UserAccountScreen:
-    confirmDelete: "Voulez-vous vraiment supprimer votre compte ? Cette action est irréversible."
+    confirmDelete: ".هل انت متأكد انك تريد حذف حسابك ؟ هذا العمل لا رجوع فيه"
   UserSettings:
     confirmDeletion: Vous avez des recherches et/ou lieux récemment enregistrés qui vont être supprimés. Voulez-vous continuer ?
-    favoriteStops: Arrêts favoris
-    myPreferences: Mes préférences
-    mySavedPlaces: Mes lieux favoris (<manageLink>modifier</manageLink>)
-    noFavoriteStops: Aucun arrêt favori
-    recentPlaces: Lieux récents
-    recentSearches: Recherches récentes
-    recentSearchSummary: "{mode} de {from} à {to}"
-    rememberSearches: Enregistrer les recherches/lieux récents ?
-    stopId: "Arrêt n° {stopId}"
+    favoriteStops: محطات التوقف المفضلة
+    myPreferences: تفضيلاتي
+    mySavedPlaces: (<manageLink>تغير</manageLink>) أماكني المفضلة
+    noFavoriteStops: لا توجد محطة مفضلة
+    recentPlaces: الاماكن التي قمت بزيارتها مؤخرا
+    recentSearches: عمليات البحث الأخيرة
+    recentSearchSummary: "{mode} من {from} الى {to}"
+    rememberSearches: حفظ عمليات البحث الأخيرة / الأماكن ؟
+    stopId: "{stopId} n° الموقف"
     storageDisclaimer: >
-      En activant cette option, tous vos lieux, préférences et paramètres
-      seront enregistrés dans le cache de votre navigateur.
-      TriMet n'aura pas accès aux données concernant votre domicile, lieu de travail,
-      ou autre endroit. Vous pouvez à tout moment désactiver la collecte de vos
-      recherches/lieux récents et effacer vos domicile, lieu de travail, et arrêts favoris.
+      من خلال تمكين هذا الخيار ، جميع المواقع والتفضيلات والإعدادات الخاصة بك
+      .سيتم تخزينها في ذاكرة التخزين المؤقت للمتصفح الخاص بك
+      لن يتمكن MadinaMapper من الوصول إلى البيانات المتعلقة بمنزلك ومكان عملك
+      أو مكان آخر. يمكنك في أي وقت إلغاء تنشيط مجموعة ملفات
+      عمليات البحث / الأماكن الأخيرة ومسح منزلك وعملك ومحطات التوقف المفضلة.
   UserTripSettings:
-    forgetOptions: Oublier mes options
-    rememberOptions: Enregistrer les options de trajet
+    forgetOptions: أنسى الاختيارات
+    rememberOptions: حفظ اختيارات الطريق
     restoreOptions: "{defaults, select,
-        true {Restaurer mes préférences}
-        other {Paramètres par défaut}}"
+        true {استعادة التفضيلات الخاصة بي}
+        other {لإعدادات الافتراضية}}"
   VerifyEmailPane:
-    emailIsVerified: Mon email est vérifié
+    emailIsVerified: تم التحقق من بريدي الإلكتروني
     instructions1: >
-      Vous devriez recevoir un message par e-mail. Cliquez le lien dans le message
-      pour verifier votre adresse e-mail. Vous pourrez ensuite finir de créer votre compte.
-    instructions2: Une fois votre adresse vérifiée, cliquez sur le bouton ci-dessous pour continuer.
-    resendVerification: Envoyer un nouveau message de vérification
+      يجب أن تتلقى رسالة عبر البريد الإلكتروني. انقر فوق الارتباط الموجود في الرسالة
+      للتحقق من عنوان بريدك الإلكتروني. يمكنك بعد ذلك الانتهاء من إنشاء حسابك.
+    instructions2: .بمجرد التحقق من عنوانك ، انقر فوق الزر أدناه للمتابعة
+    resendVerification: أرسل رسالة تحقق جديدة
   ViewSwitcher:
-    switcher: Sélecteur de vues
+    switcher: عرض محدد
   WelcomeScreen:
-    prompt: Où désirez-vous aller ?
+    prompt: أين تريد أن تذهب ؟
 
 otpUi:
   DateTimeSelector:
-    arrive: Arrivée
-    depart: Départ
-    now: Tout de suite
+    arrive: وصول
+    depart: الاقلاع
+    now: فورا
   queryParameters:
-    bikeSpeed: Vitesse à vélo
-    distanceInMiles: "{miles, number, :: unit/mile unit-width-full-name}"
-    maxBikeDistance: Distance max. à vélo
-    maxBikeTime: Durée max. à vélo
-    maxEScooterDistance: Distance max. en trottinette
-    maxWalkDistance: Distance max. à pied
-    maxWalkTime: Durée max. à pied
+    bikeSpeed: سرعة ركوب الدراجات
+    #distanceInMiles: "{miles, number, :: unit/mile unit-width-full-name}"
+    distanceInMiles: "{kms, number, :: unit/km unit-width-full-name}"
+    maxBikeDistance: أقصى مسافة بالدراجة
+    maxBikeTime: لمدة القصوى بالدراجة
+    maxEScooterDistance: أقصى مسافة على دراجة بخارية
+    maxWalkDistance: أقصى مسافة سيرا على الأقدام
+    maxWalkTime: المدة القصوى سيرا على الأقدام
     optimizeBikeFlat: avec moins de reliefs
-    optimizeBikeFriendly: plus pratiques à vélo
-    optimizeBikeSpeed: plus rapides
-    optimizeFor: Privilégier les trajets
-    optimizeQuick: plus rapides
-    optimizeTransfers: avec moins de correspondances
-    speedInMilesPerHour: "{mph} mi/h"
-    walkSpeed: Vitesse à pied
-    watts: Puissance de la trottinette électrique
+    optimizeBikeFriendly: أكثر عملية على الدراجة
+    optimizeBikeSpeed: أسرع
+    optimizeFor: حديد أولويات المسارات
+    optimizeQuick: أسرع
+    optimizeTransfers: بمطابقات أقل
+    # speedInMilesPerHour: "{mph} mi/h"
+    speedInMilesPerHour: "{mph} km/h"
+    walkSpeed: سرعة المشي
+    watts: قوة سكوتر الكهربائية
     watts125kidsHoverboard: Hoverboard pour enfants (10 km/h)
     watts1500powerfulEscooter: Trottinette puissante (40 km/h)
     watts250entryLevelEscooter: Trottinette de base (18 km/h)
     watts500robustEscooter: Trottinette robuste (30 km/h)
     # Note to translator: This text is width-constrained.
-    wheelchair: Trajets accessibles en fauteuil roulant
+    wheelchair: طرق يمكن الوصول إليها بواسطة الكراسي المتحركة
   SettingsSelectorPanel:
-    bikeOnly: Vélo uniquement
-    escooterOnly: Trottinette uniquement
-    takeTransit: En transports
-    travelPreferences: Préférences de trajet
-    use: Utiliser # as in "Use bus, train, subway"
-    useCompanies: Prestataires # as in "Use companies: Spin, Lime, Bolt"
-    walkOnly: À pied uniquement
+    bikeOnly: الدراجة فقط
+    escooterOnly: سكوتر فقط
+    takeTransit: عن طريق النقل العمومي
+    travelPreferences: تفضيلات المسار
+    use: يستخدم # as in "Use bus, train, subway"
+    useCompanies: مقدمي الخدمة # as in "Use companies: Spin, Lime, Bolt"
+    walkOnly: سيرا على الاقدام فقط
   TripDetails:
-    calories: "Calories dépensées : <strong>{calories, number, ::.}</strong>"
+    calories: "سعرات حرارية محروقة : <strong>{calories, number, ::.}</strong>"
     caloriesDescription: >
-      La dépense calorique est calculée sur la base de
-      {walkMinutes, plural, one {<strong># minute</strong> effectuée} other {<strong># minutes</strong> effectuées}} à pied et
-      {bikeMinutes, plural, one {<strong># minute</strong> effectuée} other {<strong># minutes</strong> effectuées}} en vélo sur ce trajet.
-      (d'après <dietaryLink>Dietary Guidelines for Americans 2005, page 16, Table 4</dietaryLink>)
-    departure: Départ le <strong>{departureDate, date, long}</strong> à <strong>{departureDate, time, short}</strong>
+      يتم احتساب نفقات السعرات الحرارية على أساس
+      {walkMinutes, plural, one {<strong># دقيقة</strong> تم تنفيذها} other {<strong># دقيقة</strong> تم تنفيذها}} سيرا على الاقدام و
+      {bikeMinutes, plural, one {<strong># دقيقة</strong> تم تنفيذها} other {<strong># دقيقة</strong> تم تنفيذها}} .بالدراجة على هذا الطريق
+      (<dietaryLink>Dietary Guidelines for Americans 2005, page 16, Table 4</dietaryLink> حسب)
+    departure: يغادر <strong>{departureDate, date, long}</strong> الى <strong>{departureDate, time, short}</strong>
     flexDropOffMessage: >
       {hasLeadTime, select,
         true {Pour descendre à votre destination, vous devez faire une réservation préalable
@@ -686,61 +687,64 @@ otpUi:
   LocationField:
     recentlySearched: بحثت مؤخرا
     myPlaces: أماكني المفضلة
-
+    currentLocationUnavailable: الموقع الحالي غير متوفر
+    useCurrentLocation: استخدام الموقع الحالي
+    clearLocation: حذف الموقع
+    noResultsFound: لم يتم العثور على نتائج
 common:
   coordinates: "{lat}; {lon}"
   dateExpressions:
-    today: Aujourd'hui
-    tomorrow: Demain
-    yesterday: Hier
+    today: اليوم
+    tomorrow: غدا
+    yesterday: البارحة
 
   daysOfWeek:
-    monday: lundi
-    tuesday: mardi
-    wednesday: mercredi
-    thursday: jeudi
-    friday: vendredi
-    saturday: samedi
-    sunday: dimanche
+    monday: الاثنين
+    tuesday: الثلاثاء
+    wednesday: الأربعاء
+    thursday: الخميس
+    friday: الجمعة
+    saturday: السبت
+    sunday: الأحد
   daysOfWeekCompact:
-    monday: lun.
-    tuesday: mar.
-    wednesday: mer.
-    thursday: jeu.
-    friday: ven.
-    saturday: sam.
-    sunday: dim.
+    monday: الاثنين
+    tuesday: الثلاثاء
+    wednesday: الأربعاء
+    thursday: الخميس
+    friday: الجمعة
+    saturday: السبت
+    sunday: الأحد
   daysOfWeekPlural:
-    monday: lundis
-    tuesday: mardis
-    wednesday: mercredis
-    thursday: jeudis
-    friday: vendredis
-    saturday: samedis
-    sunday: dimanches
+    monday: أيام الاثنين
+    tuesday: أيام الثلاثاء
+    wednesday: أيام الأربعاء
+    thursday: أيام الخميس  
+    friday: أيام الجمعة
+    saturday: أيام السبت
+    sunday: الأحد
   # Common form UI messages
   # Note to translator: these values are width-constrained.
   forms:
-    back: Retour
-    cancel: Annuler
-    clear: Effacer
-    error: erreur !
-    defaultValue: "{value} (défaut)"
-    delete: Supprimer
-    edit: Modifier
-    finish: Terminer
-    next: Suivant
-    no: Non
-    print: Imprimer
-    save: Enregistrer
-    startOver: Recommencer
-    yes: Oui
+    back: العودة
+    cancel: لالغاء
+    clear: تمحو
+    error: "!خطأ"
+    defaultValue: "{value} (إفتراضي)"
+    delete: يمحو
+    edit: يغير
+    finish: ينهي
+    next: التالي
+    no: لا
+    print: يطبع
+    save: يسجل
+    startOver: إعادة بدء
+    yes: نعم
   itineraryDescriptions:
     calories: "{calories, number} kcal" # SI unit
-    noItineraryToDisplay: Aucun trajet à afficher.
+    noItineraryToDisplay: .لا توجد رحلات لعرضها
     # Note to translator: noTransitFareProvided is width-constrained.
-    noTransitFareProvided: Tarif inconnu 
-    transfers: "{transfers, plural, =0 {} one {# correspondance} other {# correspondances}}"
+    noTransitFareProvided: السعر غير معروف
+    transfers: "{transfers, plural, =0 {} one {# مراسلة} other {# مورسلتات}}"
 
   # Note to translator: some of the strings below are used in sentences such as:
   # "No trip found for bike, walk, and transit."
@@ -749,27 +753,27 @@ common:
   # In French, the above sentence could read:
   # "Aucun trajet en vélo, à pied, et en transports publics n'a été trouvé."
   modes:
-    bicycle: En vélo
-    bike: Vélo
-    bicycle_rent: En vélo en libre-service
-    bus: Bus
+    bicycle: على الدراجة
+    bike: دراجة هوائية
+    bicycle_rent: بواسطة دراجة الخدمة الذاتية
+    bus: أوتوبيس
     # The original OTP mode id is CABLE_CAR. Lowercase makes it cable_car.
-    cable_car: Tram tiré par câble
-    car: Voiture
-    car_park: En voiture + parc relais
-    drive: Voiture
-    ferry: Ferry
-    funicular: Funiculaire
-    gondola: Téléphérique
-    micromobility: En trottinette électrique
-    micromobility_rent: En trottinette électrique en libre-service
-    rail: Train
-    rent: Location de véhicules
-    subway: Métro
-    tram: Tram
-    transit: En transports
-    walk: À pied
-    walking: Marche
+    cable_car: ترام يسحب الكابلات
+    car: سيارة
+    car_park: سيارة + اصطف واركب
+    drive: سيارة
+    ferry: العبارة
+    funicular: فونكيولير
+    gondola: تلفريك
+    micromobility: بواسطة سكوتر كهربائي
+    micromobility_rent: بواسطة سكوتر كهربائي الخدمة الذاتية
+    rail: قطار
+    rent: تأجير المركبات
+    subway: مترو
+    tram: ترام
+    transit: عن طريق النقل
+    walk: سيرا على الأقدام
+    walking: المشي
 
   notifications:
     email: e-mail
@@ -778,25 +782,20 @@ common:
   # Note to translator: Places names below are used in
   # contexts such as: "Edit home", "Set home address".
   places:
-    custom: divers
-    dining: restaurant
-    home: domicile
-    work: lieu de travail
+    custom: مختلف
+    dining: مطعم
+    home: إقامة
+    work: مكان العمل
 
   routing:
-    routeToHeadsign: "Direction {headsign}"
+    routeToHeadsign: "{headsign} اتجاه"
 
   searchForms:
     enterDestination: >
-      Entrez votre destination ou {mobile, select,
-        true {touchez}
-        other {cliquez sur}
-      } la carte...
+      ...أدخل وجهتك أو إضغط على الخريطة
+      
     enterStartLocation: >
-      Entrez votre point de départ ou {mobile, select,
-        true {touchez}
-        other {cliquez sur}
-      } la carte...
+      ...أدخل وجهتك أو إضغط على الخريطة
 
   time:
     departureArrivalTimes: "{startTime, time, short}—{endTime, time, short}"
@@ -804,14 +803,14 @@ common:
       {days, plural,
         =0 {{hours,plural,
           =0 {{minutes, plural,
-            =0 {il y a quelques secondes}
-            =1 {il y a une minute}
-            other {il y a # minutes}
+            =0 {قبل ثوان}
+            =1 {قبل دقيقة}
+            other {# دقائق مضت}
           }}
-          =1 {il y a une heure}
-          other {il y a # heures}
+          =1 {منذ ساعة}
+          other {# منذ ساعات}
         }}
-        other {il y a # jours}
+        other {# أيام مضت}
       }
 
     # If trip is less than one hour only display the minutes.
@@ -824,20 +823,20 @@ common:
 
 util:
   state:
-    errorPlanningTrip: Une erreur s'est produite lors de la planification du trajet.
-    networkUnavailable: Le systeme {network} n'est pas disponible pour le moment.
-    noTripFound: Aucun trajet trouvé.
+    errorPlanningTrip: .حدث خطأ أثناء تخطيط المسار
+    networkUnavailable: غير متوفر في الوقت الحالي {network} النظام
+    noTripFound: .لم يتم العثور على طرق
     noTripFoundForMode: Aucun trajet {modes} n'a été trouvé.
-    noTripFoundReason: Vos points de départ et d'arrivée ne sont peut-être pas desservis dans le rayon spécifié ou aux heures indiquées, ou ne sont pas accessibles en toute sécurité.
+    noTripFoundReason: .قد لا تتم خدمة نقاط المغادرة والوصول الخاصة بك داخل النطاق المحدد أو في الأوقات المشار إليها ، أو قد لا يمكن الوصول إليها بأمان
     noTripFoundWithReason: "{noTripFound} {reason}"
-    titleBarRouteId: "Ligne {routeId}"
-    titleBarStopId: "Arrêt {stopId}"
+    titleBarRouteId: "{routeId} خط"
+    titleBarStopId: "{stopId} الموقف"
     titleBarWithStatus: "{title} | {status}"
 
 # Default values for Flex Indicator (set in configuration as well)
 config:
   flex:
-    flex-service: Service Flex
-    both: Plus de détails au bas de l'itinéraire
-    call-ahead: Appelez pour réserver
-    continuous-dropoff: Demandez l'arrêt au conducteur
+    flex-service: Flex خدمة 
+    both: مزيد من التفاصيل في الجزء السفلي من خط سير الرحلة
+    call-ahead: اتصل للحجز
+    continuous-dropoff: اطلب من السائق التوقف
