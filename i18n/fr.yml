@@ -44,7 +44,7 @@ actions:
     geolocationNotSupportedError: La géolocalisation n'est pas prise en charge par votre navigateur.
     unknownPositionError: Erreur non-gérée lors de la détection de votre emplacement.
   map:
-    currentLocation: (Emplacement actuel)
+    currentLocation: Votre position actuelle
   user:
     accountDeleted: Votre compte utilisateur ({email}) a été supprimé.
     authTokenError: Erreur lors de l'obtention d'un jeton d'authentification.
@@ -122,7 +122,7 @@ components:
     mailables: Prêt-à-poster
     menuItemIconAlt: "Icône pour le menu {label}"
     openMenu: "Ouvrir le menu"
-    routeViewer: Index des lignes
+    routeViewer: Consulter les lignes
   BackToTripPlanner:
     backToTripPlanner: Retour au planificateur de trajets
   BatchResultsScreen:
@@ -362,13 +362,13 @@ components:
       En temps normal, ce trajet prendrait <strong>{normalDuration}</strong> en empruntant les lignes: {routes}.
     details: " " # If the string is left blank, React-Intl renders the id
     findARoute: Chercher une ligne
-    header: Index des lignes
+    header: Consulter les lignes
     modeFilter: Filtre pour les modes
     noFilteredRoutesFound: Aucune ligne ne correspond à vos critères
     noRouteUrl: Aucun lien fourni pour cette ligne.
     serviceUpdate: Information sur le service
-    shortTitle: Index des lignes
-    title: Index des lignes
+    shortTitle: Consulter les lignes
+    title: Consulter les lignes
   SavedTripEditor:
     editSavedTrip: Modifier un trajet enregistré
     saveNewTrip: Enregistrer un nouveau trajet
@@ -596,7 +596,7 @@ components:
     storageDisclaimer: >
       En activant cette option, tous vos lieux, préférences et paramètres
       seront enregistrés dans le cache de votre navigateur.
-      TriMet n'aura pas accès aux données concernant votre domicile, lieu de travail,
+      MdinaMapper n'aura pas accès aux données concernant votre domicile, lieu de travail,
       ou autre endroit. Vous pouvez à tout moment désactiver la collecte de vos
       recherches/lieux récents et effacer vos domicile, lieu de travail, et arrêts favoris.
   UserTripSettings:
@@ -624,7 +624,8 @@ otpUi:
     now: Tout de suite
   queryParameters:
     bikeSpeed: Vitesse à vélo
-    distanceInMiles: "{miles, number, :: unit/mile unit-width-full-name}"
+    # distanceInMiles: "{miles, number, :: unit/mile unit-width-full-name}"
+    distanceInMiles: "{kms, number, :: unit/mile unit-width-full-name}"
     maxBikeDistance: Distance max. à vélo
     maxBikeTime: Durée max. à vélo
     maxEScooterDistance: Distance max. en trottinette
@@ -636,7 +637,8 @@ otpUi:
     optimizeFor: Privilégier les trajets
     optimizeQuick: plus rapides
     optimizeTransfers: avec moins de correspondances
-    speedInMilesPerHour: "{mph} mi/h"
+    # speedInMilesPerHour: "{mph} mi/h"
+    speedInMilesPerHour: "{mph} km/h"
     walkSpeed: Vitesse à pied
     watts: Puissance de la trottinette électrique
     watts125kidsHoverboard: Hoverboard pour enfants (10 km/h)
@@ -686,6 +688,10 @@ otpUi:
   LocationField:
     recentlySearched: Récemment recherché
     myPlaces: Mes endroits favoris
+    currentLocationUnavailable: L'emplacement actuel n'est pas disponible
+    useCurrentLocation: Utiliser votre position actuelle
+    clearLocation: Effacer la localisation
+    noResultsFound: Aucun résultat trouvé
 common:
   coordinates: "{lat}; {lon}"
   dateExpressions:
