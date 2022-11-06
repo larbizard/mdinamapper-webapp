@@ -1,7 +1,9 @@
 import { connect } from 'react-redux'
-import { Nav, Navbar } from 'react-bootstrap'
+import { FormattedMessage } from 'react-intl'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
 import React from 'react'
 
+import * as uiActions from '../../actions/ui'
 import { accountLinks, getAuth0Config } from '../../util/auth'
 import { DEFAULT_APP_TITLE } from '../../util/constants'
 import NavLoginButtonAuth0 from '../user/nav-login-button-auth0'
@@ -22,11 +24,13 @@ import ViewSwitcher from './view-switcher'
  * TODO: merge with the mobile navigation bar.
  */
 // Typscript TODO: otpConfig type
-export type otpConfigType = {
+export type Props = {
   otpConfig: any
+  popupTarget?: string
+  setPopupContent: (url: string) => void
 }
 
-const DesktopNav = ({ otpConfig }: otpConfigType) => {
+const DesktopNav = ({ otpConfig, popupTarget, setPopupContent }: Props) => {
   const { branding, persistence, title = DEFAULT_APP_TITLE } = otpConfig
   const { language: configLanguages } = otpConfig
   const showLogin = Boolean(getAuth0Config(persistence))
@@ -43,8 +47,37 @@ const DesktopNav = ({ otpConfig }: otpConfigType) => {
     )
   } else {
     brandingOrTitle = (
-      <div className="navbar-title" style={{ marginLeft: 50 }}>
-        {title}
+      <div
+        className="navbar-title"
+        style={{ display: 'flex', flexDirection: 'row', marginLeft: 50 }}
+      >
+        <div style={{ marginRight: 10, width: '20px' }}>
+          <svg
+            height="30px"
+            version="1.1"
+            viewBox="0 0 20 40"
+            width="20px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="var(--ci-primary-color, currentColor)"
+              transform="matrix(.095057 0 0 .095057 -3.9753 .65178)"
+            >
+              <g transform="matrix(.38043 0 0 .38043 36.407 -6.6917)">
+                <path d="m253.92 127.59a64 64 0 1 0 64 64 64.073 64.073 0 0 0-64-64zm0 96a32 32 0 1 1 32-32 32.037 32.037 0 0 1-32 32z" />
+                <path d="m376.91 68.515a173.92 173.92 0 0 0-268.71 217.91l120.91 185.61a29.619 29.619 0 0 0 49.635 0l120.91-185.61a173.92 173.92 0 0 0-22.747-217.91zm-4.065 200.44-118.92 182.55-118.92-182.55c-36.4-55.879-28.593-130.66 18.563-177.82a141.92 141.92 0 0 1 200.71 0c47.156 47.158 54.962 121.94 18.562 177.82z" />
+              </g>
+              <g transform="matrix(-.37197 -.0070159 .0068611 -.38036 261.59 308.46)">
+                <path d="m253.92 127.59a64 64 0 1 0 64 64 64.073 64.073 0 0 0-64-64zm0 96a32 32 0 1 1 32-32 32.037 32.037 0 0 1-32 32z" />
+                <path d="m376.91 68.515a173.92 173.92 0 0 0-268.71 217.91l120.91 185.61a29.619 29.619 0 0 0 49.635 0l120.91-185.61a173.92 173.92 0 0 0-22.747-217.91zm-4.065 200.44-118.92 182.55-118.92-182.55c-36.4-55.879-28.593-130.66 18.563-177.82a141.92 141.92 0 0 1 200.71 0c47.156 47.158 54.962 121.94 18.562 177.82z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <a href="https://mdinamapper.ma" style={{ color: '#000000' }}>
+          {title}
+        </a>
       </div>
     )
   }
@@ -69,6 +102,11 @@ const DesktopNav = ({ otpConfig }: otpConfigType) => {
 
       <Navbar.Collapse>
         <Nav pullRight>
+          {popupTarget && (
+            <NavItem onClick={() => setPopupContent(popupTarget)}>
+              <FormattedMessage id={`config.popups.${popupTarget}`} />
+            </NavItem>
+          )}
           {configLanguages &&
             // Ensure that > 1 valid language is defined
             Object.keys(configLanguages).filter(
@@ -89,10 +127,13 @@ const DesktopNav = ({ otpConfig }: otpConfigType) => {
 // Typescript TODO: state type
 const mapStateToProps = (state: any) => {
   return {
-    otpConfig: state.otp.config
+    otpConfig: state.otp.config,
+    popupTarget: state.otp.config?.popups?.launchers?.toolbar
   }
 }
 
-const mapDispatchToProps = {}
+const mapDispatchToProps = {
+  setPopupContent: uiActions.setPopupContent
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(DesktopNav)
